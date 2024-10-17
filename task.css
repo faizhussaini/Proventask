@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5e9ff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+
+h1 {
+    color: #ff00ff;
+    text-align: center;
+    font-size: 10px;
+    margin-bottom: 20px;
+}
+
+.box {
+    border: 2px solid #f0f0f0; 
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.box:hover {
+    border-color: #ff00ff; 
+}
+
+.box h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.box label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+.box select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.content {
+    display: none;
+}
+
+.box.expanded .content {
+    display: block;
+}
+
+.discount-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #ff66cc; 
+    color: white;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.price {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.price del {
+    color: #aaa; 
+    margin-left: 5px;
+}
+
+.radio-button {
+    margin-right: 10px;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #ff4d94; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff1a75;
+}
+
+.total-price {
+    text-align: right;
+    font-size: 18px;
+    margin-top: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+.free-delivery {
+    color: #ff4d94;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.unit-container {
+    display: inline-flex; 
+    align-items: center; 
+}
+
+.unit-container h2 {
+    margin: 0 1px; 
+    font-size: 16px; 
+}
+.price-container {
+    text-align: right; 
+}
+
+.discounted-price {
+    color: red; 
+    font-weight: bold; 
+    margin-left: 0%;
+}
+
+.original-price {
+    color: gray; 
+}
+.box {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    position: relative;
+}
+

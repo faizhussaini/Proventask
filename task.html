@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prove Boxes</title>
+    <link rel="stylesheet" href="task.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin: 20px;
+        }
+        .box {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px 0;
+            position: relative;
+            cursor: pointer;
+        }
+        .most-popular {
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            background-color: pink;
+            color: white;
+            padding: 5px 10px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .selected {
+            border-color: #007bff;
+            box-shadow: 0 0 5px #007bff;
+        }
+        button {
+            background-color: palevioletred;
+            width: 300px;
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div  width: 300px; >
+            <h1 style="font-size: x-large; color: palevioletred;">YaY! It's BOGO</h1>
+        </div>
+
+            <div class="box" id="box1" >
+                <div style="display: flex; flex-direction: row;">
+            <input type="radio" name="product" id="radio3" class="radio-button">
+
+            <div style="display: flex; flex-direction: row; gap: 50px; ">
+                <div class="unit-container" style="display: flex; flex-direction: column; ">
+                    <h2 class="unit" >2 Unit</h2>
+                <h2 class="discount">20% Off</h2>
+                </div>
+                <div class="price-container" style="display: flex; flex-direction: column;" >
+                    
+                        <span class="discounted-price" >$10.00 USD</span>
+                        <del class="original-price">$24.00 USD</del>
+                    
+                </div>
+            </div>
+        </div>
+            <div class="content">
+                <label for="size1">Size:</label>
+                <select id="size1">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                </select>
+                <label for="color1">Color:</label>
+                <select id="color1">
+                    <option value="Black">Black</option>
+                    <option value="Red">Red</option>
+                    <option value="Blue">Blue</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="box" id="box2">
+            <div style="display: flex; flex-direction: row;">
+
+            <div>
+                <input type="radio" name="product" id="radio3" class="radio-button">
+
+            </div>
+            <div class="most-popular" style="position: absolute; top: -10px; right: 10px; background-color: pink; color: white; padding: 5px 10px; font-size: 14px; font-weight: bold; border-radius: 5px;">
+                Most Popular
+            </div> 
+            <div style="display: flex; flex-direction: row; gap: 50px; ">
+                <div class="unit-container" style="display: flex; flex-direction: column; ">
+                    <h2 class="unit" >2 Unit</h2>
+                <h2 class="discount">20% Off</h2>
+                </div>
+                <div class="price-container" style="display: flex; flex-direction: column;" >
+                    
+                        <span class="discounted-price" >$18.00 USD</span>
+                        <del class="original-price">$24.00 USD</del>
+                    
+                </div>
+            </div>
+            </div>
+            <div class="content">
+                <label for="size2">Size:</label>
+                <select id="size2">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                </select>
+                <label for="color2">Color:</label>
+                <select id="color2">
+                    <option value="Black">Black</option>
+                    <option value="Red">Red</option>
+                    <option value="Blue">Blue</option>
+                </select>
+            </div>
+        </div>
+        
+        
+
+        <div class="box" id="box3">
+            <div style="display: flex; flex-direction: row;">
+
+            <input type="radio" name="product" id="radio3" class="radio-button">
+
+            <div style="display: flex; flex-direction: row; gap: 50px; ">
+                <div class="unit-container" style="display: flex; flex-direction: column; ">
+                    <h2 class="unit" >3 Unit</h2>
+                <h2 class="discount">20% Off</h2>
+                </div>
+                <div class="price-container" style="display: flex; flex-direction: column;" >
+                    
+                        <span class="discounted-price" >$24.00 USD</span>
+                        <del class="original-price">$24.00 USD</del>
+                    
+                </div>
+            </div>
+            </div>
+            <div class="content">
+                <label for="size3">Size:</label>
+                <select id="size3">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                </select>
+                <label for="color3">Color:</label>
+                <select id="color3">
+                    <option value="Black">Black</option>
+                    <option value="Red">Red</option>
+                    <option value="Blue">Blue</option>
+                </select>
+            </div>
+        </div>
+
+        <div style="width: 300px; display: flex; flex-direction: row; gap: 150px;">
+                <h1  style="color: palevioletred;  ">Free Shipping</h1>
+                <h1 style="color: palevioletred;"> Total <span style="color: brown;" id="total-price">$0.00 USD</span></h1>
+        </div>
+
+        <button style="background-color: palevioletred; width: 300px;" > Add To Cart </button>
+    </div>
+    <script src="task.js"></script>
+</body>
+
+
+<script>
+    const boxes = document.querySelectorAll('.box');
+    const radioButtons = document.querySelectorAll('.radio-button');
+
+    boxes.forEach((box, index) => {
+        box.addEventListener('click', () => {
+            boxes.forEach(b => b.classList.remove('selected'));
+            box.classList.add('selected');
+            radioButtons[index].checked = true;
+            updateTotal(box);
+        });
+    });
+
+    function updateTotal(selectedBox) {
+        const priceText = selectedBox.querySelector('.discounted-price').textContent;
+        const priceValue = priceText.replace('$', '').replace(' USD', '').trim();
+
+        const totalPriceElement = document.getElementById('total-price');
+        totalPriceElement.textContent = `$${priceValue} USD`; 
+    }
+</script>
+</html>
